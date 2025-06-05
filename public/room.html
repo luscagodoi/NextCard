@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Card - Sala</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <div class="room-container">
+
+    <!-- Cabeçalho esquerdo: botões câmera e microfone -->
+    <div class="header-left">
+      <button id="btn-camera">Desligar Câmera</button>
+      <button id="btn-mic">Mutar Microfone</button>
+    </div>
+
+    <!-- Cabeçalho centro: apelido do oponente e código da sala -->
+    <div class="header-center">
+      <span id="opponent-nickname">Apelido do Oponente</span> | <span id="room-code">Código da Sala</span>
+    </div>
+
+    <!-- Cabeçalho direito: botão voltar -->
+    <div class="header-right">
+      <button id="btn-back">Next Card (Voltar)</button>
+    </div>
+
+    <!-- Linha 2 - Coluna 1: Chat -->
+    <div class="chat-box">
+      <div class="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="chat-input" placeholder="Mensagem..." />
+        <button id="chat-send" aria-label="Enviar mensagem" title="Enviar mensagem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- Linha 2 - Coluna 2: Mesa do oponente -->
+    <div class="main-camera">
+      <p>Mesa do Oponente (Câmera Principal)</p>
+    </div>
+
+    <!-- Linha 2 - Coluna 3: Carta em foco -->
+    <div class="card-preview">
+      <img src="https://via.placeholder.com/200x280?text=Carta" alt="Carta em foco" />
+      <div class="card-description">
+        Aqui aparecerá uma breve descrição da carta selecionada.
+      </div>
+    </div>
+
+    <!-- Linha 3 - Coluna 1: Minha câmera -->
+    <div class="my-camera">
+  <video id="user-camera" autoplay playsinline muted></video>
+</div>
+
+
+    <!-- Linha 3 - Coluna 2: Preview da minha mesa -->
+    <div class="preview-camera">
+      <p>Preview da sua mesa</p>
+    </div>
+
+    <!-- Linha 3 - Coluna 3: Câmera do oponente -->
+    <div class="opponent-camera">
+      <p>Câmera do Oponente</p>
+    </div>
+
+  </div>
+
+  <script src="receita.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+  background: linear-gradient(135deg, #16003e, #0080ff);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  background: rgb(255, 255, 255);
+  color: #a402b9;
+  padding: 40px;
+  font-family: 'WDXL Lubrifont TC', sans-serif;
+  font-size: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+
+  overflow: hidden;            /* esconder overflow durante animação */
+  height: auto;                /* altura dinâmica */
+  
+}
+h1 {
+  font-family: 'Hanalei Fill', sans-serif;
+  font-size: 68px;
+  color: #1b106d;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+
+/* Remove animações globais antigas, pois vamos controlar via JS */
+
+/* A área do conteúdo que vai fazer fade in/out da opacidade*/
+#contentArea {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #2f238c;
+  font-size: 24px;
+  font-weight: normal;
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+  box-shadow: none;
+  display: none; /* só aparece depois de clicar */
+}
+
+/* botões, inputs e outros estilos permanecem iguais */
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+button,
+.btn {
+  background: #2f238c;
+  color: white;
+  padding: 20px 36px;
+  text-decoration: none;
+  font-family: 'WDXL Lubrifont TC', sans-serif;
+  font-size: 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #220894;
+  transform: translateY(-2px);
+}
+
+.formulario {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.25s ease;
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #2f238c;
+  box-shadow: 0 0 0 4px rgba(47, 35, 140, 0.15);
+  background-color: #fefeff;
+}
