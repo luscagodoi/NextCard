@@ -1,0 +1,26 @@
+{
+  "name": "nextcard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch --no-warnings server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luscagodoi/NextCard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luscagodoi/NextCard/issues"
+  },
+  "homepage": "https://github.com/luscagodoi/NextCard#readme",
+  "dependencies": {
+    "fastify": "^5.3.3"
+  }
+}
