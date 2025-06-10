@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     backBtn.addEventListener('click', () => {
-      window.location.href = 'index.html'; // Volta pro menu principal
+      window.location.href = '/'; // Volta pro menu principal
     });
   
     chatSend.addEventListener('click', sendMessage);
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Voltar ao menu
   backBtn.addEventListener('click', () => {
-    window.location.href = 'index.html';
+    window.location.href = '/';
   });
 
   // Chat

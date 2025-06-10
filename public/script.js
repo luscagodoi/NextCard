@@ -21,12 +21,16 @@ const formHTML = (type) => `
         <label for="apelido">Apelido:</label>
         <input type="text" id="apelido" placeholder="Digite seu apelido" required />
       </div>
-      <div class="form-group">
-        <label for="codigo">Código da Sala:</label>
-        <input type="text" id="codigo" placeholder="${type === 'criar' ? 'Crie um código' : 'Insira o código'}" required />
-      </div>
+      ${type === 'entrar' ?
+        `<div class="form-group">
+          <label for="codigo">Código da Sala:</label>
+          <input type="text" id="codigo" placeholder="${type === 'criar' ? 'Crie um código' : 'Insira o código'}" required />
+        </div>`
+        : 
+        ''
+      }
       <div class="button-group">
-        <a href="room.html" class="btn" id="submit-button">Confirmar</a>
+        <a class="btn" id="submit-button">Confirmar</a>
       </div>
     </form>
   </div>

@@ -1,14 +1,30 @@
 import fastify from "fastify"
 
-const server = fastify()
+import fastifyStatic from "@fastify/static"
 
-server.get("/", ()=>{
-    return "Hello world!"
-})
+import path from "path"
 
-server.get("/room", ()=>{
-    return "Hello room!"
-})
+import { fileURLToPath } from "url"
+
+// Necessário para usar __dirname com ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const server = fastify({ logger: true })
+
+server.register(fastifyStatic, {
+  root: path.join(__dirname, 'public'),
+  prefix: '/',
+});
+
+server.get('/', async (request, reply) => {
+  return reply.sendFile('index.html');
+});
+
+server.get('/room/:id', async (request, reply) => {
+  return reply.sendFile('room.html');
+});
+
 
 server.listen({
     port:"3333",
