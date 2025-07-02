@@ -30,7 +30,7 @@ const formHTML = (type) => `
         ''
       }
       <div class="button-group">
-        <a class="btn" id="submit-button">Confirmar</a>
+        <button class="btn" id="submit-button">Confirmar</a>
       </div>
     </form>
   </div>
@@ -128,9 +128,11 @@ function showForm(type) {
 function setupListeners() {
   const btnCriar = document.getElementById('btn-criar');
   const btnEntrar = document.getElementById('btn-entrar');
+  const submitBtn = document.getElementById('submit-button');
 
   if (btnCriar) btnCriar.addEventListener('click', () => showForm('criar'));
   if (btnEntrar) btnEntrar.addEventListener('click', () => showForm('entrar'));
+  if (submitBtn) submitBtn.addEventListener('click', () => console.log("Funciona!"));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
